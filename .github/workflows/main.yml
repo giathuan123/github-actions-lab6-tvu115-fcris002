@@ -24,10 +24,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+        with: 
+          submodules: 'true'
 
       # Runs cmake to make build folder
       - name: Building cmake folder
-        run: cmake3 -S . -B build
+        run: cmake -S . -B build
 
       # BUlding test executable
       - name: Building test executable
