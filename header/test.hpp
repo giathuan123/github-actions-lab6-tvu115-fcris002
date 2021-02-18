@@ -11,7 +11,7 @@ TEST(CONSTRUCTOR_TEST, negativeWidthTest)
 
 TEST(CONSTRUCTOR_TEST, negativeHeightTest)
 {
-    Rectangle r = Rectangle(-10, 5);
+    Rectangle r = Rectangle(10, -5);
     EXPECT_EQ(r.get_height(), 5);
 }
 
@@ -36,7 +36,7 @@ TEST(AREA_TEST, negativeHeightTest)
 
 TEST(AREA_TEST, negativeRectTest)
 {
-    Rectangle r = Rectangle(-10, -5);
+    Rectangle r = Rectangle(-10, 5);
     EXPECT_EQ(r.area(), 50);
 }
 // PERIMETER TEST //
