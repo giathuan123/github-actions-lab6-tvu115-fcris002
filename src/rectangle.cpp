@@ -1,7 +1,13 @@
 #include <rectangle.hpp>
 
 Rectangle::Rectangle(): width(0), height(0) {}
-Rectangle::Rectangle(int w, int h):width(w), height(h){}
+Rectangle::Rectangle(int w, int h){
+    if(w < 0) widht = -w;
+    else widht = w;
+    if(h < 0) height = -h;
+    else height = h;
+    
+}
 
 void Rectangle::set_width(int w)
 {
