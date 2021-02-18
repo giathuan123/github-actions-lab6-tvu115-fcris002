@@ -1,5 +1,5 @@
-#ifndef __CONSTRUCTOR_TEST__
-#define __CONSTRUCTOR_TEST__
+#ifndef _TEST__
+#define _TEST__
 #include <gtest/gtest.h>
 #include <rectangle.hpp>
 
