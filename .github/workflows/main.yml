@@ -6,7 +6,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [ main , giathuan123/ci-setup]
   pull_request:
     branches: [ main ]
 
@@ -24,13 +24,16 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+        with: 
+          submodules: 'true'
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      # Runs cmake to make build folder
+      - name: Building cmake folder
+        run: cmake -S . -B build
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      # BUlding test executable
+      - name: Building test executable
+        run: make -C build test
+      # Running test
+      - name: Running test
+        run: ./build/test
