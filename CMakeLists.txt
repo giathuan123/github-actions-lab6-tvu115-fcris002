@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8)
 
 add_subdirectory(googletest)
 
-add_executable(main ./src/main.cpp ./src/rectangle.cpp)
+add_executable(main ./src/rectangle.cpp)
 add_executable(test ./tests/test.cpp ./src/rectangle.cpp)
 
 target_include_directories(main PRIVATE ./header)
