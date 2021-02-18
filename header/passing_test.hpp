@@ -22,7 +22,7 @@ TEST(CONSTRUCTOR_TEST, negativeRectTest)
     EXPECT_EQ(r.get_height(), 5);
 }
 // AREA TEST //
-TEST(CONSTRUCTOR_TEST, negativeWidthTest)
+TEST(AREA_TEST, negativeWidthTest)
 {
     Rectangle r = Rectangle(-10, 5);
     EXPECT_EQ(r.area(), 50);
@@ -55,7 +55,7 @@ TEST(PERIMETER_TEST, negativeHeightTest)
 TEST(PERIMETER_TEST, negativeRectTest)
 {
     Rectangle r = Rectangle(-10, -5);
-    EXPECT_EQ(r.perimeter(), 50);
+    EXPECT_EQ(r.perimeter(), 30);
 }
 
 #endif
